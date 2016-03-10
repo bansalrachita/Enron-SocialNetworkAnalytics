@@ -78,7 +78,7 @@ A series of centrality measures that describe the ‘importance’ of a person a
 Degree of a node in a directional relationship is the In-degree and the Out-degree incident to and from itself to other nodes respectively. Freeman approach was used to determine the degree which considers which calculates links to and from form a node.
 A node with high degree centrality signifies more visibility in the network, which is also recognized as an active member and a major channel of information in the network. Since they have many connections, they have many choices in satisfying their needs and hence are less dependent on others.
 
- ### Top 10 nodes with most In-degree and Out-degree
+### Top 10 nodes with most In-degree and Out-degree
 
 
     - ID	34	33	73	16	76	72	65	35	32	50
@@ -86,7 +86,7 @@ A node with high degree centrality signifies more visibility in the network, whi
 	- ID	34	74	33	68	16	58	76	30	114	69
 	- OutDeg	78	71	41	38	37	35	33	33	12	30
  
- ### Top 10 nodes having highest closeness
+### Top 10 nodes having highest closeness
 
      - ID	34	74	33	16	30	65	58	76	26	68
 	- Close	0.7772	0.7488	0.6558	0.6184	0.603 0.6027	0.6002	0.5906	0.5797	0.579
@@ -100,5 +100,6 @@ A node with high degree centrality signifies more visibility in the network, whi
 ### Top 10 Nodes having highest Eigenvector centrality
     - ID	34	74	33	30	16	41	39	31	35
 
-
+##Visualization in D3.js
+http://www1.coe.neu.edu/~rbansal/d3js/
 
