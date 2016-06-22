@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.link {
+    stroke: #999;
+    stroke-opacity: .6;
+}
+
+h3 {
+    color: #1ABC9C;
+    text-align:center;  
+    font-style: italic;
+    font-size: 14px;
+    font-family: "Helvetica";
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+} 
+
+d3-tip {
+    line-height: 1;
+    color: black;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap2/bootstrap-switch.css"/>
+<body oncontextmenu="return false">
+<div align="center">
+<h2>Enron Network Analysis</h2>
+<form>
+    <h3> Link threshold 0 <input type="range" id="thersholdSlider" name="points" value = 0 min="0" max="10" onchange="threshold(this.value)"> 10 </h3>
+</form>
+<h3>Click on a node to fade out all but its immediate neighbours. <br> Double-click to bring them back again.</h3>
+<h3> Drag a node to pin it down. Single click to release it </h3>
+<h3>Toggle between mutual connections and second connections buttons <br/> Switch one On and the other off at a time</h3>
+	<div class="ui-widget">
+		<form>
+			<input id="search">
+    			<button type="button" onclick="searchNode()">Search</button>
+			<h3>
+			Select Layout			
+			<input id="lout" type="radio" name="layout" value="force" checked>Force layout
+			<input id="lout" type="radio" name="layout" value="tree">Tree Layout
+			<INPUT Type="button" value="Refresh" onClick="history.go(0)">
+			</h3>
+			<h3>
+			Show Mutual Connections
+			<input id="mutual" type="checkbox" name="my-checkbox">			
+			</h3>
+			<h3>
+			Show Second Connections
+			<input id="second" type="checkbox" name="my-connections">			
+			</h3>
+		</form>
+	</div>
+</div>
+<div id="chart"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+<script type='text/javascript' src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"> </script>
+<script src="script.js"></script>
+<script  src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.js"></script>
+<script>
+$("[name='my-checkbox']").bootstrapSwitch();
+</script>
+
+<script>
+$("[name='my-connections']").bootstrapSwitch();
+</script>
+</body>
+
